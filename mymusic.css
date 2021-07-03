@@ -1,0 +1,142 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+html {
+	font-size:62.5%;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	height:100vh;
+	width:100%;
+	display:grid;
+	place-items:center;
+}
+
+.music_container {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	height:56rem;
+	width:30rem;
+	border:2px solid rgba(230,25,25,0.25);
+	border-radius:3rem;
+	position:relative;
+	box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+}
+
+.music_container h1 {
+	top:1.5rem;
+	font-size:3rem;
+	position:absolute;
+}
+
+#artist{
+	position:absolute;
+	top:6rem;
+	font-size:2rem;
+}
+
+#music_name {
+	position:absolute;
+	top:8rem;
+	font-size:2rem;
+}
+
+.img_container img{
+	height:20rem;
+	width:20rem;
+	left:2.5rem;
+	border-radius:50%;
+	margin-top:0.2rem;
+}
+
+.irota{
+	animation:ir 5s infinite linear;
+}
+
+.imgshadow{
+	box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+}
+
+@keyframes ir{
+	0%{
+		transform:rotate(0deg);
+	}
+	
+	50%{
+		transform:rotate(180deg);
+	}
+	
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+.range {
+  -webkit-appearance: none;
+  vertical-align:middle;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: black;
+  width:22rem;
+  height:0.5rem;
+  position:absolute;
+  bottom:8rem;
+  left:50%;
+  transform: translate(-50%, 0);
+  border-radius:3px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance:none;
+  border-radius: 100%;
+  background-color: red;
+  height: 13px;
+  width: 13px;
+}
+
+.duration{
+	position: absolute;
+    left: 50%;
+    bottom: 20%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+	font-size: 1.5rem;
+    transform: translateX(-50%);
+}
+
+.control {
+	font-size:3.4rem;
+	display:flex;
+	justify-content:space-between;
+	width:15rem;
+	height:4.5rem;
+	align-items:center;
+	position:absolute;
+	bottom:2rem;
+}
+
+#play {
+	height:4.5rem;
+	width:4.5rem;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:50%;
+	box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.75);
+}
+
+.next:hover ,.prev:hover {
+	opacity:0.6;
+	transform:scale(1.5);
+	transition:.5s;
+}
+
