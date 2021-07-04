@@ -21,7 +21,7 @@ audio.pause();
 const playmusic = () => {
 	audio.play();
 	img.classList.add("irota");
-	img.classList.add("img_containershadow");
+	img.classList.add("imgshadow");
 	play_btn.classList.remove("fa-play");
 	play_btn.classList.add("fa-pause");
 	playing = true;
