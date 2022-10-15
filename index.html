@@ -5,46 +5,69 @@
     name="viewport"
   />
   <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link href="mymusic.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <title>My Music</title>
   </head>
   <body>
     <div class="music_container">
-      <h1>Music Player</h1>
-      <p id="music_name">Saki Saki</p>
-      <p id="artist">Neha Kakker</p>
-      <div class="img_container">
-        <img src="./images/Music1.jpg" alt="music_image" />
-      </div>
-      <div class="duration">
-        <span class="ftime"> --:-- </span>
-        
-        <span class="stime"> --:-- </span>
-      </div>
-	  <input
-          type="range"
-          min="0"
-          max="100"
-          value="0"
-          class="range"
-          id="range"
+      <div class="background_image">
+        <img
+          id="background_image"
+          src="https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="background"
         />
-      <div class="control">
-        <i class="fa fa-backward prev" id="prev"></i>
-        <i class="fa fa-play" id="play"></i>
-        <i class="fa fa-forward next" id="next"></i>
       </div>
-      <audio src="./music/music1.mp3" autoplay="autoplay"></audio>
+      <div class="header">
+        <div class="time">09:20 AM</div>
+        <div class="time">
+          56% <i class="fa-solid fa-battery-three-quarters"></i>
+        </div>
+      </div>
+      <div class="main_wrp">
+        <div class="music_header">
+          <i class="fa-solid fa-arrow-left"></i>
+          <div class="song_info">
+            <p id="music_name">Saki Saki</p>
+            <p id="artist_name">Neha kakker</p>
+          </div>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+
+        <div class="img_container">
+          <img
+            id="circle_image"
+            src="https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="music_image"
+          />
+        </div>
+
+        <div class="duration_container">
+          <div class="time">
+            <p class="start_time"> 00:00 </>
+            <p class="end_time"> 00:00 </>
+          </div>
+          <div class="progress_bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+
+        <div class="control_container">
+          <i class="fa-solid fa-shuffle otherBtn"></i>
+          <i class="fa-solid fa-backward otherBtn" id="prev"></i>
+          <i class="fa-solid fa-play" id="play"></i>
+          <i class="fa-solid fa-forward otherBtn" id="next"></i>
+          <i class="fa-solid fa-repeat otherBtn"></i>
+        </div>
+        <audio src="" id="audio"></audio>
+      </div>
     </div>
-    <script src="mymusic.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
