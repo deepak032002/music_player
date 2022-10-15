@@ -131,6 +131,16 @@ progress_bar.addEventListener("mouseleave", () => {
   state.isChangeSongDuration = false;
 });
 
+progress_bar.addEventListener("touchmove", (e) => {
+  state.isChangeSongDuration = true;
+  const percentage = Math.ceil((e.offsetX / progress_bar.offsetWidth) * 100);
+  progress.style.width = `${percentage}%`;
+});
+
+progress_bar.addEventListener("touchleave", () => {
+  state.isChangeSongDuration = false;
+});
+
 progress_bar.addEventListener("click", (e) => {
   const percentage = Math.ceil((e.offsetX / progress_bar.offsetWidth) * 100);
   progress.style.width = `${percentage}%`;
@@ -142,3 +152,5 @@ progress_bar.addEventListener("click", (e) => {
 window.onload = () => {
   setData(state.current);
 };
+
+
