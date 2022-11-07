@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index",
-    "start": "node backend/server.js",
-    "build": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "start": "node backend/server.js"
   },
   "repository": {
     "type": "git",
